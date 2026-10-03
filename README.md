@@ -4,7 +4,7 @@ An auditable intake-triage pipeline: advisory perception, deterministic priority
 
 **Synthetic research software, not a clinical service.** Use invented messages only. No real patient data, diagnosis, emergency response, insurance verification, appointment booking, outbound delivery, or external task system is supported. A priority label is a review proposal, not a clinical assessment. All items require human review. An escalation record does not notify anyone.
 
-[Portfolio](https://chimeraforge.vercel.app/) · [Work](https://chimeraforge.vercel.app/work) · [Browser edition and engineering article, PR62](https://github.com/Sahil170595/Banterblogs/pull/62). The browser page is pending that PR's merge; it is not claimed to be deployed here.
+[Portfolio](https://chimeraforge.vercel.app/) · [Work](https://chimeraforge.vercel.app/work) · [Browser demo](https://chimeraforge.vercel.app/projects/agents-and-evaluation/intake-triage). The browser demo ports only `score.ts`, rule for rule, and scores every combination of the signals it reads; it reproduces this repository's fixture result from the keyless perception's signal bundles. It does not read message text or run orchestration.
 
 ## Quickstart
 
