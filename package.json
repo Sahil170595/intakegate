@@ -1,0 +1,27 @@
+{
+  "name": "intakegate",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Auditable synthetic intake triage with advisory perception and deterministic review routing",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "triage": "tsx src/index.ts",
+    "validate": "tsx src/index.ts validate",
+    "schema": "tsx src/index.ts schema",
+    "test": "tsx --test --test-concurrency=1 test/intakegate.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.97.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "tsx": "^4.19.2",
+    "ulid": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}

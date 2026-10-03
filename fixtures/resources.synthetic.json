@@ -1,0 +1,25 @@
+{
+  "patients": [
+    {"patient_id":"patient-alpha","name":"Sample Alpha","dob":"2010-01-01","guardian_name":"Sample Guardian","status":"active"},
+    {"patient_id":"patient-beta","name":"Sample Beta","dob":"2011-02-02","guardian_name":"Sample Guardian","status":"active"}
+  ],
+  "providers": [
+    {"provider_id":"provider-a","name":"Synthetic Clinician A","discipline":"SLP","languages":["en","es"],"age_range":"fixture only","caseload_status":"accepting","next_available_slots":[{"slot_id":"slot-late","start":"2030-01-03T10:00:00.000Z","appointment_type":"evaluation"},{"slot_id":"slot-early","start":"2030-01-02T10:00:00.000Z","appointment_type":"evaluation"}]},
+    {"provider_id":"provider-b","name":"Synthetic Clinician B","discipline":"OT","languages":["en"],"age_range":"fixture only","caseload_status":"limited","next_available_slots":[{"slot_id":"slot-ot","start":"2030-01-04T10:00:00.000Z","appointment_type":"evaluation"}]},
+    {"provider_id":"provider-c","name":"Synthetic Clinician C","discipline":"SLP","languages":["en","es"],"age_range":"fixture only","caseload_status":"full","next_available_slots":[{"slot_id":"slot-unavailable","start":"2030-01-02T08:00:00.000Z","appointment_type":"evaluation"}]}
+  ],
+  "coverage": [
+    {"payer":"DemoClear","member_id":"DEM-001","status":"in_network","auth_required":true},
+    {"payer":"DemoAway","member_id":"DEM-002","status":"out_of_network","auth_required":false},
+    {"payer":"DemoStale","member_id":"DEM-003","status":"expired","auth_required":false}
+  ],
+  "policies": {
+    "service_lines":"Synthetic note: SLP, OT and PT are fixture discipline labels, not offered services.",
+    "insurance":"Synthetic note: adverse coverage routes to billing review. No real benefit verification or booking occurs.",
+    "safeguarding":"Synthetic note: record a priority review request and an unsent draft. No notification or emergency service is connected.",
+    "clinical_advice":"Synthetic note: do not generate clinical advice; propose clinician review only.",
+    "scheduling":"Synthetic note: staff must confirm requests; fixture slots are suggestions only.",
+    "cancellation":"Synthetic note: no appointment is cancelled by this program.",
+    "language_access":"Synthetic note: language metadata filters fixture providers; translated drafts need qualified review."
+  }
+}
